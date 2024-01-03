@@ -56,8 +56,8 @@ public class SocketFactoryFactory {
   public static SSLSocketFactory getSslSocketFactory(Properties info) throws KSQLException {
     String classname = KWProperty.SSL_FACTORY.get(info);
     if (classname == null
-        || "LibPQFactory".equals(classname)
-        || "LibPQFactory".equals(classname)) {
+      || "com.kaiwudb.ssl.jdbc4.LibPQFactory".equals(classname)
+      || "com.kaiwudb.ssl.LibPQFactory".equals(classname)) {
       return new LibPQFactory(info);
     }
     try {
