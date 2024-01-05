@@ -110,7 +110,7 @@ public enum KWProperty {
    * Sets the default threshold for enabling server-side prepare. A value of {@code -1} stands for
    * forceBinary
    */
-  PREPARE_THRESHOLD("prepareThreshold", "5",
+  PREPARE_THRESHOLD("prepareThreshold", "0",
       "Statement prepare threshold. A value of {@code -1} stands for forceBinary"),
 
   /**

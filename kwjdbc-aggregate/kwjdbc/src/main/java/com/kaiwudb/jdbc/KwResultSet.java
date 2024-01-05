@@ -2459,7 +2459,7 @@ public class KwResultSet implements ResultSet, KWRefCursorResultSet {
       // If the data is already binary then just return it
       return thisRow[columnIndex - 1];
     }
-    if (fields[columnIndex - 1].getOID() == Oid.BYTEA || fields[columnIndex - 1].getOID() == Oid.VARBINARY) {
+    if (fields[columnIndex - 1].getOID() == Oid.BYTEA || fields[columnIndex - 1].getOID() == Oid.VARBYTEA) {
       return trimBytes(columnIndex, KWbytea.toBytes(thisRow[columnIndex - 1]));
     } else {
       return trimBytes(columnIndex, thisRow[columnIndex - 1]);

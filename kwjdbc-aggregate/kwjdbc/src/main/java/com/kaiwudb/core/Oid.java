@@ -77,7 +77,12 @@ public class Oid {
   public static final int JSON_ARRAY = 199;
   public static final int REF_CURSOR = 1790;
   public static final int REF_CURSOR_ARRAY = 2201;
-  public static final int VARBINARY = 91006;
+  public static final int NCHAR = 91002;
+  public static final int NCHAR_ARRAY = 91003;
+  public static final int NVARCHAR = 91004;
+  public static final int NVARCHAR_ARRAY = 91005;
+  public static final int VARBYTEA = 91006;
+  public static final int VARBYTEA_ARRAY = 91007;
 
   private static final Map<Integer, String> OID_TO_NAME = new HashMap<Integer, String>(100);
   private static final Map<String, Integer> NAME_TO_OID = new HashMap<String, Integer>(100);

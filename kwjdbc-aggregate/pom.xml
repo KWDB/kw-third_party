@@ -9,7 +9,7 @@
   <artifactId>kwjdbc-aggregate</artifactId>
   <packaging>pom</packaging>
   <name>KAIWU JDBC Driver aggregate</name>
-  <version>1.2.1</version>
+  <version>1.2.3</version>
   <description>KAIWU JDBC aggregate project</description>
 
   <modules>
