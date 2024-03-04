@@ -220,9 +220,15 @@ class KwPreparedStatement extends KwStatement implements PreparedStatement {
       case Types.CHAR:
         oid = Oid.BPCHAR;
         break;
+      case Types.NCHAR:
+        oid = Oid.NCHAR;
+        break;
       case Types.VARCHAR:
       case Types.LONGVARCHAR:
         oid = connection.getStringVarcharFlag() ? Oid.VARCHAR : Oid.UNSPECIFIED;
+        break;
+      case Types.NVARCHAR:
+        oid = Oid.NVARCHAR;
         break;
       case Types.DATE:
         oid = Oid.DATE;
@@ -564,8 +570,14 @@ class KwPreparedStatement extends KwStatement implements PreparedStatement {
       case Types.CHAR:
         setString(parameterIndex, castToString(in), Oid.BPCHAR);
         break;
+      case Types.NCHAR:
+        setString(parameterIndex, castToString(in), Oid.NCHAR);
+        break;
       case Types.VARCHAR:
         setString(parameterIndex, castToString(in), getStringType());
+        break;
+      case Types.NVARCHAR:
+        setString(parameterIndex, castToString(in), Oid.NVARCHAR);
         break;
       case Types.LONGVARCHAR:
         if (in instanceof InputStream) {
