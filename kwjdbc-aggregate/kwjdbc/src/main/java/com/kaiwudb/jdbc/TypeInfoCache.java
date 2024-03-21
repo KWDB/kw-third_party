@@ -78,6 +78,7 @@ public class TypeInfoCache implements TypeInfo {
       {"varchar", Oid.VARCHAR, Types.VARCHAR, "java.lang.String", Oid.VARCHAR_ARRAY},
       {"nchar", Oid.NCHAR, Types.NCHAR, "java.lang.String", Oid.NCHAR_ARRAY},
       {"nvarchar", Oid.NVARCHAR, Types.NVARCHAR, "java.lang.String", Oid.NVARCHAR_ARRAY},
+      {"geometry", Oid.GEOMETRY, Types.VARCHAR, "java.lang.String", Oid.GEOMETRY_ARRAY},
       {"text", Oid.TEXT, Types.VARCHAR, "java.lang.String", Oid.TEXT_ARRAY},
       {"name", Oid.NAME, Types.VARCHAR, "java.lang.String", Oid.NAME_ARRAY},
       {"bytea", Oid.BYTEA, Types.BINARY, "[B", Oid.BYTEA_ARRAY},

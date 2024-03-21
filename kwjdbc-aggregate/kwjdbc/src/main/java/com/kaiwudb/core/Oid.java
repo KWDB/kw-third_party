@@ -83,6 +83,8 @@ public class Oid {
   public static final int NVARCHAR_ARRAY = 91005;
   public static final int VARBYTEA = 91006;
   public static final int VARBYTEA_ARRAY = 91007;
+  public static final int GEOMETRY = 91008;
+  public static final int GEOMETRY_ARRAY = 91009;
 
   private static final Map<Integer, String> OID_TO_NAME = new HashMap<Integer, String>(100);
   private static final Map<String, Integer> NAME_TO_OID = new HashMap<String, Integer>(100);
