@@ -13,8 +13,8 @@
   <version>2.0.1</version>
   <packaging>bundle</packaging>
 
-  <name>kwjdbc</name>
-  <description>Java JDBC 4.2 (JRE 8+) driver for KAIWU database</description>
+  <name>kaiwudb-jdbc</name>
+  <description>Java JDBC 4.2 (JRE 8+) driver for KaiwuDB database.</description>
 
   <organization>
     <name>KaiwuDB Global Development Group</name>
@@ -222,6 +222,7 @@
   </profiles>
 
   <build>
+    <finalName>kaiwudb-jdbc-${project.version}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
