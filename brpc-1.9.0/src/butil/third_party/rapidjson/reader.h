@@ -1536,8 +1536,16 @@ private:
             state = d;
 
             // Do not further consume streams if a root JSON has been parsed.
-            if ((parseFlags & kParseStopWhenDoneFlag) && state == IterativeParsingFinishState)
-                break;
+          if ((parseFlags & kParseStopWhenDoneFlag) && state == IterativeParsingFinishState) {
+            // wwb: Update parseResult_.Offset() when kParseStopWhenDoneFlag
+            // is set which means the user needs to know where to resume
+            // parsing in next calls to JsonToProtoMessage()
+            if (is.Peek() != '\0') {
+              SetParseError(kParseErrorNone, is.Tell());
+            }
+            break;
+
+          }
 
             SkipWhitespace(is);
         }
