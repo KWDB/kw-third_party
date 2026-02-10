@@ -575,13 +575,16 @@ file(COPY ${PROJECT_SOURCE_DIR}/src/
         PATTERN "*.h"
         PATTERN "*.hpp"
         )
-# install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/output/include/
-#         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-#         FILES_MATCHING
-#         PATTERN "*.h"
-#         PATTERN "*.hpp"
-#         )
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/output/include/
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        FILES_MATCHING
+        PATTERN "*.h"
+        PATTERN "*.hpp"
+        )
 
 # Install pkgconfig
 configure_file(cmake/brpc.pc.in ${PROJECT_BINARY_DIR}/brpc.pc @ONLY)
-# install(FILES ${PROJECT_BINARY_DIR}/brpc.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+install(FILES ${PROJECT_BINARY_DIR}/brpc.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+
+#Install library
+install(FILES ${PROJECT_BINARY_DIR}/output/lib/libbrpc.a DESTINATION ${CMAKE_INSTALL_LIBDIR})
